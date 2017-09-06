@@ -2,26 +2,24 @@
 """Program: Which Prize
 Programmer: Michael Fryar
 Created: 2017.08.20
-Purpose: Practice conditional statements
+Purpose: Practice conditional statements and booleans
 """
 
 
 def which_prize(points):
     """Returns the prize-winning message, given a number of points"""
+    prize = None
     if points <= 50:
-        prize_name = "wooden rabbit"
+        prize = "wooden rabbit"
     elif 150 < points <= 180:
-        prize_name = "wafer-thin mint"
+        prize = "wafer-thin mint"
     elif 180 < points <= 200:
-        prize_name = "penguin"
+        prize = "penguin"
+    if prize:
+        return "Congratulations! You have won a {}!".format(prize)
     else:
-        prize_name = "No prize"
-    if 50 < points <= 150:
-        message = "Oh dear, no prize this time."
-    else:
-        message = "Congratulations! You have won a {}!".format(prize_name)
-    print(message)
-which_prize(50)
-which_prize(51)
-which_prize(180)
-which_prize(181)
+        return "Oh dear, no prize this time."
+which_prize(12)
+which_prize(149)
+which_prize(164)
+which_prize(194)
