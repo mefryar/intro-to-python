@@ -5,7 +5,9 @@ Created: 2017.08.20
 Purpose: Practice conditional statements
 """
 
+
 def which_prize(points):
+    """Returns the prize-winning message, given a number of points"""
     if points <= 50:
         prize_name = "wooden rabbit"
     elif 150 < points <= 180:
